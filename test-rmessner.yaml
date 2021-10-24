@@ -7,7 +7,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: rmessner-team
+  owner: rmessner
   system: rmessner-portal
 ---
 apiVersion: backstage.io/v1alpha1
@@ -18,7 +18,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: rmessner-team
+  owner: rmessner
   system: rmessner-portal
 ---
 apiVersion: backstage.io/v1alpha1
@@ -27,21 +27,8 @@ metadata:
   name: rmessner-portal
   description: Handy tools to keep artists in the loop
 spec:
-  owner: rmessner-team
+  owner: rmessner
   domain: rmessner
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: rmessner-team
-  description: The infra business unit
-spec:
-  type: team
-  profile:
-    displayName: Infrastructure
-    email: infrastructure@example.com
-    picture: https://example.com/groups/bu-infrastructure.jpeg
-  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -52,4 +39,4 @@ spec:
     displayName: Jenny Doe
     email: jenny-doe@example.com
     picture: https://example.com/staff/jenny-with-party-hat.jpeg
-  memberOf: [rmessner-team]
+  memberOf: []
