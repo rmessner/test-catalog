@@ -9,6 +9,7 @@ spec:
   lifecycle: production
   owner: rmessner-team
   system: rmessner-portal
+  dependsOn: ['component:rmessner-service']
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -18,6 +19,17 @@ metadata:
 spec:
   type: service
   lifecycle: production
+  owner: rmessner-team
+  system: rmessner-portal
+  dependsOn: ['resource:rmessner-db']
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rmessner-db
+  description: Stores artist details
+spec:
+  type: database
   owner: rmessner-team
   system: rmessner-portal
 ---
